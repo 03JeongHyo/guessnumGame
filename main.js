@@ -18,6 +18,7 @@ let gameOver = false;
 let chanceArea = document.getElementById("chance-area");
 let history=[]
 
+
 playButton.addEventListener("click",play); //click되면 play라는 함수 실행시킴 ,play를 변수처럼 넘기기 위해 ()사용x
 resetButton.addEventListener("click",reset);
 userInput.addEventListener("focus",function(){userInput.value=""}); //단순,다른 곳에 안쓸 때, 이름없는 함수 사용
@@ -38,7 +39,7 @@ function play(){
         return;
     }
     chances --;
-    chanceArea.textContent=`남은 기회:${chances}번`;
+    chanceArea.textContent=`남은 기회 :${chances}번`;
     console.log("chance", chances);
 
     if (userValue < computerNum){
@@ -48,7 +49,7 @@ function play(){
         resultArea.textContent = "Down!";
     }
     else {
-        resultArea.textContent = ("맞췄습니다!!");
+        resultArea.textContent = ("자물쇠를 풀었습니다");
         gameOver = true;
     }
     history.push(userValue); //history에 저장
@@ -64,7 +65,11 @@ function play(){
 function reset(){
     userInput.value = "";
     pickRandomNum();
-
     resultArea.textContent="결과값이 여기 나옵니다!";
+    chances = 5;
+    chanceArea.textContent = `남은 기회 : ${chances}번`; 
+    gameOver = false;
+    playButton.disabled = false;
+    history = []; 
 }
 pickRandomNum();
