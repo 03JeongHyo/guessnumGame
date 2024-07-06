@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(30, 29, 33);
+    text-align: center;
+    color: white;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    display: block;
+    width: 1330px;
+    height: 680px;
+    margin: 0 auto;
+}
+#message,#hint {
+    position: relative;
+    color: black;
+    top: -80px; /* 메시지를 위로 이동 */
+    right: -210px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#hint{
+    margin-top: 25px;
+    font-family: ;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#user-input, #play-button, #reset-button, #result-area, #chance-area {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#user-input {
+    width: 200px;
+}
+
+#play-button, #reset-button {
+    cursor: pointer;
+}

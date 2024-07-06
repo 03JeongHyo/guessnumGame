@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <h1>숫자 맞추기 게임!</h1>
-    <div id = "result-area">결과 보기</div>
-    <div id = "chance-area">남은 찬스:5번</div>
-    <input type="number" id="user-input">
-    <button id="play-button">GO!</button>
-    <button id="reset-button">Reset</button>
+    <div class="container">
+        <img src="fantasybackground3.png" width="1300px" height="600px" class="image">
+        <div class="text">
+            <div id="message">네가 이 보물의 주인이라면 자물쇠를 풀어보아라. <br>기회는 오직 5번 뿐이니 신중하게 입력하도록.</div>
+            <div id="hint">(힌트 : 숫자 1~100까지 중 하나)             </div>
+            <input type="number" id="user-input" placeholder="숫자를 입력하세요">
+            <div id="result-area">결과 보기</div>
+            <div id="chance-area">남은 찬스: 5번</div>
+            <button id="play-button">GO!</button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

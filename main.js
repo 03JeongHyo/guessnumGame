@@ -20,6 +20,7 @@ let history=[]
 
 playButton.addEventListener("click",play); //click되면 play라는 함수 실행시킴 ,play를 변수처럼 넘기기 위해 ()사용x
 resetButton.addEventListener("click",reset);
+userInput.addEventListener("focus",function(){userInput.value=""}); //단순,다른 곳에 안쓸 때, 이름없는 함수 사용
 
 function pickRandomNum(){
     computerNum = Math.floor(Math.random()*100)+1; // 1~50까지로 하려면 *50으로 해준다. 
@@ -48,7 +49,7 @@ function play(){
     }
     else {
         resultArea.textContent = ("맞췄습니다!!");
-        playButton.disabled = true;
+        gameOver = true;
     }
     history.push(userValue); //history에 저장
     
